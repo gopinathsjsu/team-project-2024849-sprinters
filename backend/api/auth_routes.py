@@ -27,22 +27,62 @@ def authenticate():
     return {'errors': ['Unauthorized']}
 
 
-@auth_routes.route('/login', methods=['POST'])
+# @auth_routes.route('/login', methods=['POST'])
+# def login():
+#     if request.method == 'OPTIONS':
+#         return {}, 200 
+#     """
+#     Logs a user in
+#     """
+#     form = LoginForm()
+#     # Get the csrf_token from the request cookie and put it into the
+#     # form manually to validate_on_submit can be used
+#     form['csrf_token'].data = request.cookies['csrf_token']
+#     if form.validate_on_submit():
+#         # Add the user to the session, we are logged in!
+#         user = User.query.filter(User.email == form.data['email']).first()
+#         login_user(user)
+#         return user.to_dict()
+#     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
+@auth_routes.route('/login', methods=['POST', 'OPTIONS'])
 def login():
-    """
-    Logs a user in
-    """
+    if request.method == 'OPTIONS':
+        return {}, 200
+    
     form = LoginForm()
-    # Get the csrf_token from the request cookie and put it into the
-    # form manually to validate_on_submit can be used
-    form['csrf_token'].data = request.cookies['csrf_token']
+    form['csrf_token'].data = request.headers.get('XSRF-Token')
     if form.validate_on_submit():
-        # Add the user to the session, we are logged in!
         user = User.query.filter(User.email == form.data['email']).first()
         login_user(user)
         return user.to_dict()
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
+@auth_routes.route('/signup', methods=['POST', 'OPTIONS'])
+def sign_up():
+    if request.method == 'OPTIONS':
+        response = jsonify({'message': 'Preflight request successful'})
+        response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,X-CSRFToken')
+        response.headers.add('Access-Control-Allow-Methods', 'POST, OPTIONS')
+        response.headers.add('Access-Control-Allow-Credentials', 'true')
+        return response, 200
+    
+    form = SignUpForm()
+    form['csrf_token'].data = request.cookies['XSRF-Token']
+    if form.validate_on_submit():
+        user = User(
+            username=form.data['username'],
+            email=form.data['email'],
+            first_name=form.data['first_name'],
+            last_name=form.data['last_name'],
+            password=form.data['password']
+        )
+        db.session.add(user)
+        db.session.commit()
+        login_user(user)
+        return user.to_dict()
+    return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 @auth_routes.route('/logout')
 def logout():
@@ -53,8 +93,10 @@ def logout():
     return {'message': 'User logged out'}
 
 
-@auth_routes.route('/signup', methods=['POST'])
-def sign_up():
+# @auth_routes.route('/signup', methods=['POST'])
+# def sign_up():
+    if request.method == 'OPTIONS':
+        return {}, 200  
     """
     Creates a new user and logs them in
     """

@@ -1,5 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { thunk } from 'redux-thunk';
+import { restoreCSRF } from './csrf';
 
 import session from './session';
 import restaurants from './restaurants';
@@ -18,7 +19,12 @@ const rootReducer = combineReducers({
 
 let enhancer;
 
+if (process.env.NODE_ENV !== 'production') {
+  restoreCSRF();
+}
+
 if (process.env.NODE_ENV === 'production') {
+  restoreCSRF();
   enhancer = applyMiddleware(thunk);
 } else {
   const logger = require('redux-logger').default;
