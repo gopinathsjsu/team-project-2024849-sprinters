@@ -1,0 +1,157 @@
+.profile-drop-down-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    height: 300px;
+    width: 320px;
+    position: absolute;
+    background-color: white;
+    margin-top: 351px;
+    margin-left: -280px;
+    border: 1px solid;
+    border-color: rgb(235, 235, 235);
+    border-radius: 2px;
+    z-index: 9;
+}
+
+.profile-drop-down-top {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1.5px solid;
+    border-color: rgb(240, 239, 239);
+}
+
+.profile-drop-down-bottom {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:space-evenly;
+    font-size: 1rem;
+}
+
+
+.profile-drop-button {
+    background-color: white;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgb(80, 77, 77);
+    /* padding-left: 15px; */
+    width: 320px;
+    height: 33px;
+}
+
+.profile-drop-button:hover {
+    background-color: #f7f7f7;
+}
+
+.profile-drop-my-profile:hover {
+    cursor: not-allowed;
+}
+
+.profile-log-out-button {
+    font-size: 1.05rem;
+}
+
+.spacing-down {
+    line-height: 2;
+}
+
+.greeting {
+    font-size: 1.03rem;
+    font-weight: bolder;
+    padding-top: 22px;
+    padding-left: 15px;
+    color: rgb(68, 66, 66);
+    width: 320px;
+    padding-bottom: 10px;
+    margin-top: -7px;
+}
+
+.learn-about-points {
+    padding-left: 15px;
+    padding-bottom: 20px;
+    width: 320px;
+    margin-bottom: -5px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgb(218, 54, 68);
+}
+
+.learn-about-points:hover {
+    cursor: not-allowed;
+}
+
+.points-graph {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.profile-drop-down-points {
+    width: 325px;
+}
+
+.points-earned-left {
+    margin-left: 16px;
+}
+
+.points-earned-right {
+    margin-right: 20px;
+}
+
+.points-earned {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+}
+
+.next-reward-text {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: rgb(153, 153, 153)
+}
+
+.earned-text {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: rgb(153, 153, 153)
+}
+
+.points-text-left {
+    font-size: 1rem;
+}
+
+.points-text-right {
+    font-size: 1rem;
+}
+
+.points-text-color-gray {
+    color: rgb(151, 150, 150);
+    font-weight: 300
+}
+
+.points-graph-icon {
+    width: 300px;
+    margin-left: -6px;
+}
+
+.my-dining-history:hover {
+    cursor: pointer;
+}
+
+.my-saved-restaurants:hover {
+    cursor: pointer;
+}
+
+.profiile-drop-button-left {
+    padding-left: 15px;
+}
