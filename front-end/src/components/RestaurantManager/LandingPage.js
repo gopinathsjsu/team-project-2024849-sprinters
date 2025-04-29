@@ -12,7 +12,6 @@ const LandingPage = () => {
 
             <div className="heading-wrapper">
                 <h1 className="heading-text">
-                    {'Welcome to Restaurant Management'}
                 </h1>
             </div>
 
