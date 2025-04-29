@@ -1,0 +1,70 @@
+/* Layout */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Links */
+.nav-link {
+    color: #374151; /* gray-700 */
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 24px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #dc2626; /* red-600 */
+}
+
+.get-started-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #b91c1c;
+}
+
+.logout-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+    color: white;
+}
+

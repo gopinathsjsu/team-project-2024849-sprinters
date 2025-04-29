@@ -1,0 +1,70 @@
+.register-page {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.register-logo {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.register-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+
+.register-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border: none;
+    background: #efe6e6;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.register-button {
+    background-color: #dc2626;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.register-button:hover {
+    background-color: #b91c1c;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+}

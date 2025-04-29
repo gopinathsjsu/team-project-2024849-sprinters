@@ -1,0 +1,104 @@
+.manage-menu-page {
+    min-height: calc(100vh - 100px);
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.restaurant-select {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+.restaurant-select select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.menu-table th,
+.menu-table td {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.edit-btn {
+    background-color: #facc15;
+    border: none;
+    padding: 6px 12px;
+    margin-right: 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.add-menu-btn {
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.menu-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.menu-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.menu-form button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #6b7280;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-table th,
+    .menu-table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .menu-form input {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,142 @@
+.manage-restaurants-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.manage-restaurants-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* align top */
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: large;
+}
+
+.add-restaurant-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 3rem;
+
+}
+
+.add-restaurant-btn:hover {
+    background-color: #2563eb;
+}
+
+.restaurant-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.restaurant-table th,
+.restaurant-table td {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+}
+
+.edit-btn {
+    background-color: #facc15;
+    color: black;
+    padding: 6px 10px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: #eab308;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .restaurant-table th,
+    .restaurant-table td {
+        font-size: 0.9rem;
+    }
+}
+
+.confirm-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.confirm-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+}
+
+.confirm-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #6b7280;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background-color: #b91c1c;
+}
+
+.cancel-btn:hover {
+    background-color: #4b5563;
+}
+

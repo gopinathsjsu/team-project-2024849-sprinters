@@ -1,0 +1,29 @@
+.restaurant-list-page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.restaurant-list-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.restaurant-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 280px;
+    text-align: center;
+}
+
+.restaurant-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.restaurant-card p {
+    margin: 4px 0;
+}

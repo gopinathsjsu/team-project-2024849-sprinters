@@ -1,0 +1,78 @@
+.add-edit-restaurant-form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-bottom: 2rem;
+}
+
+.add-edit-restaurant-heading {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    margin-left: 20rem;
+    color: black;
+
+}
+
+.form-group-left {
+    display: contents; /* allows grid children to layout correctly */
+}
+
+.form-label {
+    text-align: right;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.add-edit-restaurant-form input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9fafb;
+    box-sizing: border-box;
+}
+
+.add-edit-restaurant-form button {
+    grid-column: 2 / 3;
+    background-color: #dc2626;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.add-edit-restaurant-form button:hover {
+    background-color: #b91c1c;
+}
+
+.form-message {
+    grid-column: 2 / 3;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: green;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .add-edit-restaurant-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-label {
+        text-align: left;
+    }
+
+    .add-edit-restaurant-form button,
+    .form-message {
+        grid-column: 1 / 2;
+    }
+}
