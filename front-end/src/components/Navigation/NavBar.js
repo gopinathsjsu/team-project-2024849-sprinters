@@ -29,20 +29,19 @@ const NavBar = ({ loaded, showSignInModal, setShowSignInModal }) => {
             <img src={locationIcon} className="location-icon" alt="" />
           </div>
           <div className="nav-bar-location-city-text">
-            San Jose
+            Los Angeles
           </div>
           <div>
             <img src={downCarrot} className="down-carrot-icon" alt="" />
           </div>
         </div>
-        {!loaded &&
-          <NavigationMenu showSignInModal={!showSignInModal} setShowSignInModal={!setShowSignInModal} />}
+        {loaded &&
+          <NavigationMenu showSignInModal={showSignInModal} setShowSignInModal={setShowSignInModal} />}
       </div>
     </nav>
   );
 }
 
 export default NavBar;
-
 
 

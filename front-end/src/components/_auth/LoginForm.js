@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Navigate } from 'react-router-dom';
-
+import { Redirect } from 'react-router-dom';
 import { login } from '../../store/session';
 import './LoginForm.css';
 
@@ -24,7 +23,6 @@ const LoginForm = ({ setShowSignInModal }) => {
     setValidationErrors(errors);
 
     if (!errors.length) {
-      console.log('hey')
       const data = await dispatch(login(email, password));
       if (data) {
         const backendErrors = [];
@@ -55,13 +53,13 @@ const LoginForm = ({ setShowSignInModal }) => {
     setPassword(e.target.value);
   };
 
-  if (user) {
-    return <Navigate to='/' />;
-  }
+  // if (user) {
+  //   return <Redirect to='/' />;
+  // }
 
   return (
     <form onSubmit={onLogin} className="login-form">
-      <h1>Welcome to BookTable!</h1>
+      <h1>Welcome to ReserveTable!</h1>
       <div className="sign-in-form-error-messages">
         {validationErrors.length > 0 &&
           validationErrors.map(error => (

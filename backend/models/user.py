@@ -8,7 +8,7 @@ from datetime import datetime
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
 
-    if environment == "development":
+    if environment == "production":
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
@@ -17,14 +17,14 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(50), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     hashed_password = db.Column(db.String(255), nullable=False)
-    created_at = db.Column(db.DateTime, nullable=False, index=False, default=datetime.utcnow)
+    # created_at = db.Column(db.DateTime, nullable=False, index=False, default=datetime.utcnow)
 
     reviews = db.relationship("Review", back_populates="user")
     reservations = db.relationship("Reservation", back_populates="user")
 
     saved_restaurants = db.relationship("SavedRestaurant", back_populates="users")
 
-    restaurants = db.relationship("Restaurant", secondary="favorites", back_populates="users")
+    # restaurants = db.relationship("Restaurant", secondary="favorites", back_populates="users")
 
     @property
     def password(self):
@@ -45,7 +45,7 @@ class User(db.Model, UserMixin):
             'first_name': self.first_name,
             'last_name': self.last_name,
             'saved_restaurants': [restaurant.to_dict() for restaurant in self.saved_restaurants] if self.saved_restaurants else None,
-            'reviews': self.reviews,
-            'reservations': self.reservations,
-            'reviews': len(self.reviews)
+            # 'reviews': self.reviews,
+            # 'reservations': self.reservations
+            # 'reviews': len(self.reviews)
         }

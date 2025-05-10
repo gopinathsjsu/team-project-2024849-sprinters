@@ -83,10 +83,28 @@ function Footer() {
                             </div>
                         </div>
                         <div>
-                           
+                            <div className="footer-other-sites">
+
+                                <div className="footer-below-other-sites">
+                                    <div className="footer-other-site">
+                                        <a id="ayrbnb" className="ayrbnb-link" href="https://ayrbnb.herokuapp.com" target="_blank" rel="noreferrer">
+                                            ayrbnb.herokuapp.com
+                                            <img src={rightArrow} className="footer-right-arrow ayrbnb-arrow" />
+                                        </a>
+                                    </div>
+                                    <div className="footer-other-site">
+                                        <a id="codebunny" className="codebunny-link" href="https://codebunny.onrender.com" target="_blank" rel="noreferrer">
+                                            codebunny.onrender.com
+                                            <img src={rightArrow} className="footer-right-arrow codebunny-arrow" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
+                    <div>
+
+                    </div>
                 </div>
                 <div className="footer-bottom">
                     <div className="footer-terms">
@@ -96,7 +114,7 @@ function Footer() {
                         <div>Do Not Sell</div>
                         <div>Cookies Settings</div>
                     </div>
-                  
+
                 </div>
             </div>
         </footer >

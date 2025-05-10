@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, session, request
-from ..models import User, db
-from ..forms import LoginForm, SignUpForm
+from backend.models import User, db
+from backend.forms import LoginForm
+from backend.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
 
 auth_routes = Blueprint('auth', __name__, url_prefix="/api/auth")
@@ -27,11 +28,20 @@ def authenticate():
     return {'errors': ['Unauthorized']}
 
 
-@auth_routes.route('/login', methods=['POST'])
+@auth_routes.route('/login', methods=['GET','POST'])
 def login():
-    """
-    Logs a user in
-    """
+
+    # if request.method == 'GET':
+    #     return jsonify({"message": "Login route is reachable via GET"}), 200
+    # if request.method == 'POST':
+    #     # print("LOGIN POST ROUTE ENTERED") # Check Render logs
+    #     # print(f"Request headers: {request.headers}")
+    #     # print(f"Request cookies: {request.cookies}")
+    #     # print(f"Request form data: {request.form}")
+    #     # print(f"Request JSON data: {request.get_json(silent=True)}")
+    #     return jsonify({"message": "Login POST request received successfully!"}), 200
+    # return jsonify({"error": "Method not handled correctly in debug"}), 500
+
     form = LoginForm()
     # Get the csrf_token from the request cookie and put it into the
     # form manually to validate_on_submit can be used

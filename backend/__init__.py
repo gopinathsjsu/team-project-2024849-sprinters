@@ -7,19 +7,16 @@ from flask_login import LoginManager
 from .models import db, User, SavedRestaurant
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
+from .api.reservation_routes import reservation_routes
+from .api.restaurant_routes import restaurant_routes
+from .api.review_routes import review_routes
 from .seeds import seed_commands
 from .config import Config
 
-# app = Flask(__name__, static_folder='../front-end/build', static_url_path='/')
-app = Flask(__name__, static_folder='../front-end/public', static_url_path='')
-
+app = Flask(__name__, static_folder='../front-end/build', static_url_path='/')
 
 # Setup login manager
-
-
 login = LoginManager(app)
-
-
 login.login_view = 'auth.unauthorized'
 
 
@@ -34,16 +31,14 @@ app.cli.add_command(seed_commands)
 app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
-# app.register_blueprint(reservation_routes, url_prefix='/api/reservations')
-# app.register_blueprint(restaurant_routes, url_prefix='/api/restaurants')
-# app.register_blueprint(review_routes, url_prefix='/api/reviews')
-
+app.register_blueprint(reservation_routes, url_prefix='/api/reservations')
+app.register_blueprint(restaurant_routes, url_prefix='/api/restaurants')
+app.register_blueprint(review_routes, url_prefix='/api/reviews')
 db.init_app(app)
-
 Migrate(app, db)
 
 # Application Security
-CORS(app, origins="http://localhost:3000", supports_credentials=True)
+CORS(app)
 
 
 # Since we are deploying with Docker and Flask,
@@ -67,7 +62,7 @@ def inject_csrf_token(response):
         generate_csrf(),
         secure=True if os.environ.get('FLASK_ENV') == 'production' else False,
         samesite='Strict' if os.environ.get(
-            'FLASK_ENV') == 'development' else None,
+            'FLASK_ENV') == 'production' else None,
         httponly=True)
     return response
 

@@ -1,0 +1,440 @@
+.search-results-search-bar-and-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.search-results-search-bar-container {
+    background-color: rgb(50, 55, 69);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 83px;
+}
+
+.search-results-search-bar-date-time-party-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 50px;
+    width: 480px;
+    border-radius: 4px;
+    margin-left: 273px;
+}
+
+.search-results-search-bar-date-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 173px;
+    border-right: 1.5px solid;
+    border-color: rgb(237, 233, 233);
+}
+
+.search-results-search-bar-reservation-date-icon {
+    height: 32px;
+    width: 37px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.search-results-search-bar-reservation-date {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-results-search-bar-reservation-date-select {
+    border: none;
+    font-size: 1.05rem;
+    margin-right: 15px;
+    width: 123px;
+    appearance: none;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-results-date-down-caret {
+    position: absolute;
+    right: 0;
+    height: 12px;
+    margin-right: 18px;
+    z-index: 5;
+}
+
+.search-results-search-bar-reservation-date-select:hover {
+    cursor: pointer;
+}
+
+.search-results-search-bar-time-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-right: 1.5px solid;
+    border-color: rgb(237, 233, 233);
+    width: 148px;
+}
+
+.search-results-search-bar-clock-icon {
+    height: 21px;
+    width: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.search-results-search-bar-reservation-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-left: 6px;
+}
+
+.search-results-time-down-caret {
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+}
+
+.search-results-search-bar-time-select {
+    border: none;
+    font-size: 1.05rem;
+    margin-left: 3px;
+    width: 95px;
+    appearance: none;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-results-search-bar-time-select:hover {
+    cursor: pointer;
+}
+
+.search-results-search-bar-party-size-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-results-search-bar-person-icon {
+    height: 22px;
+    width: 21px;
+    margin-left: 12px;
+    margin-top: 3px;
+}
+
+.search-results-search-bar-reservation-party-size {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-left: 2px;
+}
+
+.search-results-search-bar-party-size-down-caret {
+    height: 12px;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    margin-right: 6px;
+}
+
+.search-results-search-bar-party-size-select {
+    border: none;
+    font-size: 1.05rem;
+    margin-left: 6px;
+    width: 105px;
+    appearance: none;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.search-results-search-bar-party-size-select:hover {
+    cursor: pointer;
+}
+
+.search-results-search-bar-text-input-and-results-container {
+    background-color: white;
+    height: 48px;
+    margin-left: 17px;
+    display: flex;
+    flex-direction: column;
+    width: 292px;
+    border-radius: 4px;
+}
+
+.search-results-search-bar-magnifying-glass-icon {
+    height: 23px;
+    margin-top: 13px;
+    margin-left: 8px;
+}
+
+.search-results-search-bar-search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(221, 221, 221);
+}
+
+.search-results-search-bar-search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    color: rgb(62, 61, 61);
+    font-size: 1rem;
+    font-weight: 500;
+    width: 240px;
+    height: 40px;
+    border: none;
+    margin-top: 4px;
+}
+
+.search-results-search-bar-search-outer-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-results-search-bar-results-container-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-results-search-bar-search-button {
+    height: 48px;
+    width: 143px;
+    margin-left: 16px;
+    background-color: rgb(218, 54, 68);
+    color: #fff;
+    font-size: 1.02rem;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+}
+
+.search-results-search-bar-search-button:hover {
+    background-color: rgb(153, 38, 48);
+    cursor: pointer;
+}
+
+/* CSS properties for search-results-container in SearchBar.css */
+
+.search-results-search-bar-search-results-container {
+    margin-top: 4px;
+    border: solid;
+    border-color: rgb(233, 233, 233);
+    border-top-width: thin;
+    width: 290px;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    z-index: 5;
+}
+
+.search-results-restaurant-results-container {
+    height: auto;
+    margin-left: 370px;
+}
+
+.search-results-restaurant-name-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(37, 127, 158);
+    margin-top: 3px;
+}
+
+.search-results-restaurant-name-text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.search-results-rating-stars-container {
+    margin-top: 4px;
+}
+
+.search-results-restaurant-results-upper {
+    margin-top: 30px;
+}
+
+.search-results-upper-search-text {
+    font-size: 1.45rem;
+}
+
+.search-results-upper-number-results-text {
+    margin-top: 25px;
+    font-size: 0.92rem;
+}
+
+.search-results-number-restaurants-available {
+    font-size: 0.9rem;
+}
+
+.search-results-restaurant-results-lower {
+    margin-top: 30px;
+}
+
+.search-results-restaurant-results-border {
+    border-bottom: 1px solid;
+    border-color: rgb(243, 242, 242);
+    width: 810px;
+    margin-bottom: 20px;
+}
+
+.search-results-restaurant-result-container {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1.5px solid;
+    border-color: rgb(233, 232, 232);
+    padding-bottom: 20px;
+    padding-top: 10px;
+    width: 810px;
+}
+
+.search-results-restaurant-result-preview-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.search-results-restaurant-result-right {
+    margin-left: 15px;
+}
+
+.search-results-star {
+    font-size: 1.1rem;
+}
+
+.gold-star {
+    color: rgb(254, 175, 7);
+}
+
+.search-results-rating-text {
+    font-size: 0.85rem;
+    color: black;
+}
+
+.search-results-cuisine-cost-neighborhood {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgb(35, 34, 34);
+    margin-top: 2px;
+}
+
+.search-results-restaurant-cuisine {
+    font-size: 0.87rem;
+    color: rgb(1, 1, 1);
+    font-weight: 300;
+}
+
+.search-results-restaurant-neighborhood {
+    font-size: 0.87rem;
+    color: rgb(1, 1, 1);
+}
+
+.search-results-reviews-num {
+    font-size: 0.92rem;
+    font-weight: 300;
+}
+
+.search-results-reviews-num:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.search-results-num-booked-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-results-booking-symbol {
+    height: 13px;
+    width: 16px;
+}
+
+.search-results-total-num-bookings {
+    font-size: 0.87rem;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-top: -2px;
+}
+
+.search-results-total-bookings-zero {
+    height: 25px;
+}
+
+.large-dollar {
+    font-size: 1rem;
+}
+
+.search-results-reservation-times-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 580px;
+    margin-top: -3px;
+}
+
+.search-results-reservation-time {
+    background-color: rgb(218, 54, 68);
+    width: 110px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.93rem;
+    font-weight: 600;
+}
+
+.search-results-empty-timeslot {
+    background-color: rgb(234, 234, 234);
+    width: 110px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.search-results-reservation-time:hover {
+    cursor: pointer;
+    background-color: rgb(155, 41, 50);
+}
+
+.search-results-no-results-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(29, 29, 29);
+}
+
+.search-results-no-results-text {
+    width: 800px;
+    margin-top: 17px;
+    font-size: 1rem;
+    color: rgb(100, 99, 99);
+    padding-bottom: 40px;
+}
+
+.search-results-bonus-points-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(218, 54, 68);
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+
+

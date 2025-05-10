@@ -1,0 +1,153 @@
+.restaurant-nav-card-container {
+    text-decoration: none;
+    border: 1px solid;
+    border-color: rgb(196, 196, 196);
+    margin: 7px;
+    height: 312px;
+    width: 235px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+}
+
+.restaurant-nav-card-container:hover {
+    top: -6px;
+    transition: all .4s ease-in-out;
+    box-shadow: 2px 2px 6px rgb(229, 228, 228);
+}
+
+.preview-image {
+    height: 150px;
+    width: 100%;
+}
+
+/* .preview-image:hover {
+    transform: scaleX(1.08) scaleY(1.08);
+} */
+
+.restaurant-preview-details {
+    font-weight: 400;
+    font: rgb(45, 51, 63);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.restaurant-name-and-details-container {
+    margin-left: 7px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:space-around;
+    height: 150px;
+    margin-top: 5px;
+}
+
+.booking-symbol {
+    height: 15px;
+    width: 19px;
+}
+
+.booking-symbol-container {
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.booked-num {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.87rem;
+    margin-top: -6px;
+}
+
+.preview-stars-reviews {
+    font-weight: 400;
+    margin-top: -2px;
+}
+
+.preview-cuisine-cost-neighborhood {
+    font-weight: 300;
+    font-size: .82rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-top: 3px;
+}
+
+.restaurant-card-name {
+    font-size: 1.08rem;
+    font-weight: 600;
+    height: 25px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.red-star {
+    color: rgb(218, 54, 68);
+    height: 50px;
+    font-size: x-large;
+}
+
+.gray-star {
+    color: rgb(225, 225, 225);
+    font-size: x-large;
+}
+
+.card-star {
+    font-size: 1rem;
+}
+
+.preview-num-reviews {
+    color: rgb(45, 51, 63);
+    font-size: 0.88rem;
+    padding-top: -5px;
+}
+
+.dark-gray-dollar {
+    color: rgb(51, 46, 46);
+    font-weight: 400;
+}
+
+.light-gray-dollar {
+    color: rgb(191, 189, 189);
+    font-weight: 400;
+}
+
+.preview-time-buttons {
+    background-color: rgb(218, 54, 68);
+    color: white;
+    width: 70px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    font-size: .95rem;
+    z-index: 5;
+}
+
+.preview-time-buttons:hover {
+    cursor: pointer;
+    background-color: rgb(132, 3, 3);
+
+}
+
+.preview-time-buttons-div {
+    width: 230px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -4.5px;
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+
+.restaurant-card-total-bookings-zero {
+    height: 45px;
+}

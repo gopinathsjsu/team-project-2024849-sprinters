@@ -1,26 +1,103 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Import Routes and Route
-
-// Import your components
+import { useDispatch } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { authenticate } from './store/session';
 import LoginForm from './components/_auth/LoginForm';
+import SearchBar from './components/Search/SearchBar'
+import NavBar from './components/Navigation/NavBar';
+import DisplayAllRestaurants from './components/AllRestaurants/AllRestaurants';
+import RestaurantProfile from './components/RestaurantProfile/RestaurantProfile';
+import ReservationConfirmation from './components/Reservations/ReservationConfirmation';
+import ModifyReservation from './components/Reservations/ModifyReservation';
 import SignUpForm from './components/_auth/SignUpForm';
-import NavBar from './components/Navigation/NavBar';  // Example of importing NavBar
-import Footer from './components/Footer/Footer';  // Example of importing Footer
+import DiningDashboard from './components/DiningDashboard/DiningDashboard';
+import Footer from './components/Footer/Footer';
+import NavigationLocalCity from './components/Navigation/NavigationLocalCity';
+import SearchResults from './components/Search/SearchResults';
 import './index.css';
+import Reviews from './components/Reviews/Reviews';
+import Reservations from './components/Reservations/Reservations';
+// import ProtectedRoute from './components/_auth/ProtectedRoute';
+// import UsersList from './components/UsersList';
+// import User from './components/User';
 
 function App() {
+  const [loaded, setLoaded] = useState(false);
+  const [showSignInModal, setShowSignInModal] = useState(false);
+  const [userReservationTime, setUserReservationTime] = useState("");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async () => {
+      await dispatch(authenticate());
+      setLoaded(true);
+    })();
+  }, [dispatch]);
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <>
-      <Router>  {/* Wrap everything inside BrowserRouter */}
-        <NavBar />  {/* Add NavBar component */}
-        <Routes> {/* Use Routes instead of Switch */}
-          <Route path="/login" element={<LoginForm />} /> {/* Use element prop for rendering components */}
-          <Route path="/sign-up" element={<SignUpForm />} />
-        </Routes>
-      </Router>
-      <Footer />  {/* Add Footer component */}
+      <BrowserRouter>
+        <NavBar loaded={loaded}
+          setShowSignInModal={setShowSignInModal}
+          showSignInModal={showSignInModal} />
+        <Switch>
+          <Route path='/login' exact={true}>
+            <LoginForm />
+          </Route>
+          <Route path='/sign-up' exact={true}>
+            <SignUpForm />
+          </Route>
+          <Route path='/' exact={true} >
+            <NavigationLocalCity />
+            <SearchBar />
+            <DisplayAllRestaurants
+              setUserReservationTime={setUserReservationTime} />
+          </Route>
+          {/* <ProtectedRoute path='/users' exact={true} >
+          <UsersList/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/users/:userId' exact={true} >
+          <User />
+        </ProtectedRoute> */}
+          <Route path='/restaurants/:restaurantId'>
+            <NavigationLocalCity />
+            <RestaurantProfile
+              userReservationTime={userReservationTime}
+              setShowSignInModal={setShowSignInModal}
+              showSignInModal={showSignInModal} />
+          </Route>
+          <Route exact path='/restaurants/:restaurantId/reviews'>
+            <Reviews />
+          </Route>
+          <Route exact path='/restaurants/:restaurantId/reservations'>
+            <Reservations />
+          </Route>
+          <Route exact path='/reservations/:reservationId'>
+            <ReservationConfirmation />
+          </Route>
+          <Route exact path='/reservations/:reservationId/modify'>
+            <ModifyReservation />
+          </Route>
+          <Route exact path='/users/:userId/dining-dashboard'>
+            <DiningDashboard />
+          </Route>
+          <Route exact path='/search-results'>
+            <NavigationLocalCity />
+            <SearchResults />
+          </Route>
+          <Route>
+            <h1>PAGE NOT FOUND</h1>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+      <Footer />
     </>
   );
 }
 
 export default App;
+

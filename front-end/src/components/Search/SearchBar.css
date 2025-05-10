@@ -1,0 +1,436 @@
+.search-bar-container {
+    height: 250px;
+    background: linear-gradient(.25turn, rgb(20, 33, 75), 50%, rgb(100, 109, 136));
+    /* background: linear-gradient(.647turn,#1a0a47cc,#0d1b4599 .01%,#0d1b45cc 51.04%,#0d1b45 99.1%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar-heading {
+    color: #fff;
+    font-size: 1.50rem;
+}
+
+.search-bar-lower-container {
+    margin-bottom: 35px;
+    margin-top: -20px;
+    margin-left: 5px;
+}
+
+.search-bar-lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-bar-date-time-party-container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    width: 475px;
+    border-radius: 4px;
+}
+
+.search-bar-reservation-date-icon {
+    height: 32px;
+    width: 35px;
+    margin-top: 8px;
+    margin-left: -27px;
+}
+
+.search-bar-date-input-container {
+    border-right: 1.5px solid;
+    border-color: rgb(237, 233, 233);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 5px;
+    width: 125px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+}
+
+.search-bar-reservation-date {
+    margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-left: 2px;
+}
+
+.search-bar-reservation-date-select {
+    border: none;
+    font-size: 1.05rem;
+    width: 122px;
+    appearance: none;
+    margin-top: -9px;
+    color: rgb(60, 60, 60);
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-bar-reservation-date-select:hover {
+    cursor: pointer;
+}
+
+.search-bar-date-down-caret {
+    height: 12px;
+    line-height: 2;
+    margin-top: -7px;
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    margin-right: 3.5px;
+}
+
+.search-bar-date-input {
+    width: 135px;
+    height: 48px;
+    border: none;
+    font-size: 1.05rem;
+    color: rgb(60, 60, 60);
+}
+
+.search-bar-clock-icon {
+    height: 22px;
+    width: 25px;
+    margin-left: -22px;
+    margin-right: -2px;
+    margin-top: 14px;
+    padding-left: 5px;
+}
+
+.search-bar-time-input-container {
+    border-right: 1.5px solid;
+    border-color: rgb(237, 233, 233);
+    height: 48px;
+    padding-right: 10px;
+    padding-left: 15px;
+    width: 113px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar-reservation-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-top: -1px;
+}
+
+.search-bar-time-down-caret {
+    height: 12px;
+    z-index: 5;
+    right: 0;
+    position: absolute;
+    margin-right: 2.5px;
+    margin-bottom: -3px;
+}
+
+.search-bar-time-select {
+    border: none;
+    font-size: 1.05rem;
+    width: 105px;
+    margin-top: 1px;
+    padding-left: 8px;
+    color: rgb(66, 65, 65);
+    appearance: none;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 2px;
+}
+
+.search-bar-time-select:hover {
+    cursor: pointer;
+}
+
+.search-bar-party-size-container {
+    width: 115px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar-person-icon {
+    height: 22px;
+    width: 22px;
+    margin-left: -29px;
+    margin-top: 3px;
+}
+
+.search-bar-party-size-select {
+    width: 152px;
+    border: none;
+    font-size: 1.05rem;
+    color: rgb(60, 60, 60);
+    margin-left: 3px;
+    margin-top: 1px;
+    width: 100px;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-bar-party-size {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
+}
+
+.search-bar-party-size-down-caret {
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    margin-right: 2px;
+    margin-top: 4px;
+}
+
+.search-bar-party-size-select:hover {
+    cursor: pointer;
+}
+
+.search-bar-text-input-container {
+    background-color: white;
+    height: 48px;
+    margin-left: 17px;
+    display: flex;
+    flex-direction: row;
+    width: 295px;
+    border-radius: 4px;
+}
+
+.search-bar-magnifying-glass-icon {
+    height: 22px;
+    margin-top: 13px;
+    margin-left: 8px;
+}
+
+.search-bar-search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(203, 203, 203);
+}
+
+.search-bar-search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    color: rgb(90, 89, 89);
+    font-size: 1.02rem;
+    font-weight: 500;
+    width: 240px;
+    height: 40px;
+    border: none;
+}
+
+.search-bar-search-results-container {
+    margin-left: 492px;
+    margin-top: -2px;
+    border: solid;
+    border-color: rgb(233, 233, 233);
+    border-top-width: thin;
+    width: 292px;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    z-index: 5;
+}
+
+.search-bar-search-text-container:hover {
+    cursor: pointer;
+}
+
+.search-bar-search-text-container {
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(218, 54, 68);
+}
+
+.search-bar-search-text {
+    color: white;
+    font-weight: 300;
+    margin-left: 39px;
+}
+
+.search-bar-locations-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 38px;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgb(243, 241, 241);
+}
+
+.search-bar-locations-icon {
+    height: 25px;
+    width: 20px;
+    margin-left: 7px;
+}
+
+.search-bar-locations-text {
+    color: rgb(111, 115, 123);
+    font-weight: 500;
+    margin-left: 13px;
+}
+
+.search-bar-locations-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-bar-locations-results {
+    color: rgb(111, 115, 123);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 38px;
+}
+
+.search-bar-locations-results:hover {
+    background-color: rgb(218, 54, 68);
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar-locations-results-text {
+    margin-left: 40px;
+}
+
+.search-bar-cuisines-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 38px;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgb(243, 241, 241);
+}
+
+.search-bar-cuisines-text {
+    color: rgb(111, 115, 123);
+    font-weight: 500;
+    margin-left: 7px;
+}
+
+.search-bar-cuisines-icon {
+    height: 25px;
+    width: 25px;
+    margin-left: 7px;
+}
+
+.search-bar-cuisines-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-bar-cuisines-results {
+    color: rgb(111, 115, 123);
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-bar-cuisines-results-text {
+    margin-left: 39px;
+}
+
+.search-bar-cuisines-results:hover {
+    background-color: rgb(218, 54, 68);
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar-restaurants-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 38px;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgb(243, 241, 241);
+}
+
+.search-bar-restaurants-text {
+    color: rgb(111, 115, 123);
+    font-weight: 500;
+    margin-left: 9px;
+}
+
+.search-bar-restaurants-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-bar-restaurants-results {
+    color: rgb(111, 115, 123);
+    height: 38px;
+    padding-right: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-bar-restaurants-results:hover {
+    background-color: rgb(218, 54, 68);
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar-restaurants-results-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-left: 40px;
+
+}
+
+.search-bar-restaurants-icon {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+}
+
+
+
+.search-bar-search-button {
+    height: 48px;
+    width: 143px;
+    margin-left: 17px;
+    background-color: rgb(218, 54, 68);
+    color: #fff;
+    font-size: 1.02rem;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+}
+
+.search-bar-search-button:hover {
+    background-color: rgb(153, 38, 48);
+    cursor: pointer;
+}

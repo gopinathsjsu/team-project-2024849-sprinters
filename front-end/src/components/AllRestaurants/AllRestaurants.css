@@ -1,0 +1,69 @@
+.all-restaurants-container {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: calc(5% - 0px);
+    margin-right: calc(5% - 0px);
+}
+
+.all-restaurants-outer-container {
+    max-width: 1600px;
+    padding-bottom: 50px;
+}
+
+.above-restaurant-cards {
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid;
+    border-color: rgb(232, 233, 234);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:rgb(45, 51, 63);
+}
+
+@media (max-width: 1520px) {
+    .above-restaurant-cards {
+        margin-left: calc(3.8%);
+        margin-right: calc(3.8%)
+    }
+}
+
+@media(min-width: 1521px) {
+    .above-restaurant-cards {
+        margin-left: calc(6.8%);
+        margin-right: calc(6.8%);
+    }
+}
+
+.verify-city {
+    font-size: 0.84rem;
+    display: flex;
+}
+
+.current-location-arrow {
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.current-location-arrow:hover {
+    cursor: text;
+}
+
+.get-current-location {
+    color: rgb(218, 54, 68);
+    font-size: 0.86rem;
+}
+
+.get-current-location:hover {
+    cursor: not-allowed;
+}
+
+.restaurant-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { signUp } from '../../store/session';
 
-// import { signUp } from '.././session';
-import './SignUpForm.css'
 
 const SignUpForm = ({ setShowSignUpModal }) => {
   const dispatch = useDispatch();
@@ -85,16 +84,16 @@ const SignUpForm = ({ setShowSignUpModal }) => {
   };
 
   if (user) {
-    return <Navigate to='/' />;
+    return <Redirect to='/' />;
   }
 
   return (
-    <form onSubmit={onSignUp} className="sign-up-form">
+    <form onSubmit={onSignUp} >
       <div className="sign-up-form-container">
         <div>
-          <h1>Welcome to BookTable</h1>
+          <h1>Welcome to ReserveTable</h1>
         </div>
-        <div className="sign-up-form-error-messages">
+        <div >
           {validationErrors.length > 0 &&
             validationErrors.map(error =>
               <div key={error}>{error}</div>
@@ -111,7 +110,7 @@ const SignUpForm = ({ setShowSignUpModal }) => {
             onChange={updateUsername}
             value={username}
             placeholder="Username"
-            className="sign-up-input"
+            
           ></input>
         </div>
         <div>
@@ -122,7 +121,7 @@ const SignUpForm = ({ setShowSignUpModal }) => {
             onChange={updateEmail}
             value={email}
             placeholder="Email"
-            className="sign-up-input"
+            
           ></input>
         </div>
         <div>
@@ -133,7 +132,6 @@ const SignUpForm = ({ setShowSignUpModal }) => {
             onChange={updateFirstName}
             value={firstName}
             placeholder="First name"
-            className="sign-up-input"
           ></input>
         </div>
         <div>
@@ -144,7 +142,7 @@ const SignUpForm = ({ setShowSignUpModal }) => {
             onChange={updateLastName}
             value={lastName}
             placeholder="Last name"
-            className="sign-up-input"
+            
           ></input>
         </div>
         <div>
@@ -155,7 +153,7 @@ const SignUpForm = ({ setShowSignUpModal }) => {
             onChange={updatePassword}
             value={password}
             placeholder="Password"
-            className="sign-up-input"
+            
           ></input>
         </div>
         <div>
@@ -166,11 +164,11 @@ const SignUpForm = ({ setShowSignUpModal }) => {
             onChange={updateRepeatPassword}
             value={repeatPassword}
             placeholder="Confirm password"
-            className="sign-up-input"
+            
           // required={true}
           ></input>
         </div>
-        <button type='submit' className="sign-up-form-button">Sign Up</button>
+        <button type='submit' >Sign Up</button>
       </div>
     </form>
   );

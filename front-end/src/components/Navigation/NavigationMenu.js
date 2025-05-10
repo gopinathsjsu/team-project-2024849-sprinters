@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Modal } from '../../context/Modal';
-
-// import { getAllUserReservations } from '../../store/reservations';
+import { getAllUserReservations } from '../../store/reservations';
 import LoginForm from '../_auth/LoginForm';
 import SignUpForm from '../_auth/SignUpForm';
 import profileButton from '../../icons/profile-button.ico';
@@ -11,17 +10,15 @@ import notifications from '../../icons/notification-icon.ico';
 import lineBreak from '../../icons/line-break.png';
 import magnifyingGlass from '../../icons/search-button.ico';
 import ProfileButtonMenu from './ProfileButtonMenu';
-// import UpcomingReservationsMenu from '../Reservations/UpcomingReservationsMenu';
-// import upcomingReservationsNotification from '../../icons/upcoming-reservation-w-notification.ico';
-// import dayjs from 'dayjs';
+import UpcomingReservationsMenu from '../Reservations/UpcomingReservationsMenu';
+import upcomingReservationsNotification from '../../icons/upcoming-reservation-w-notification.ico';
+import dayjs from 'dayjs';
 import './NavigationMenu.css'
 
 
 function NavigationMenu({ showSignInModal, setShowSignInModal }) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
-    console.log('Session User:', sessionUser);
-    console.log('showSignInModal:', showSignInModal);
     const allReservations = useSelector(state => Object.values(state.reservations));
     const futureReservations = allReservations.filter(reservation => dayjs().isBefore(reservation.reservation_time));
 
@@ -79,9 +76,7 @@ function NavigationMenu({ showSignInModal, setShowSignInModal }) {
 
     return (
         <div className="navigation-menu">
-            
             {
-                
                 sessionUser
                     ?
                     <div className="nav-bar-menu-items">

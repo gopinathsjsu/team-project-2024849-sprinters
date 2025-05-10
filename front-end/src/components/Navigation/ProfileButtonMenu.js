@@ -1,22 +1,22 @@
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import LogoutButton from "../_auth/LogoutButton";
-import pointsGraph from '../../icons/points-graph.ico';
-import './ProfileButtonMenu.css';
+import pointsGraph from '../../icons/points-graph.ico'
+import './ProfileButtonMenu.css'
+
 
 function ProfileButtonMenu({ setShowSignInModal }) {
-    const navigate = useNavigate();
+    const history = useHistory();
     const sessionUser = useSelector(state => state.session.user);
 
-    if (!sessionUser) return null; // Prevents crash if sessionUser is null
-
     const routeToDiningDashboard = () => {
-        navigate(`/users/${sessionUser.id}/dining-dashboard`);
-    };
+        history.push(`/users/${sessionUser.id}/dining-dashboard`);
+    }
 
     const routeToSavedRestaurants = () => {
-        navigate(`/users/${sessionUser.id}/dining-dashboard?view=saved-restaurants`);
-    };
+        history.push(`/users/${sessionUser.id}/dining-dashboard?view=saved-restaurants`);
+    }
+
 
     return (
         <div className="profile-drop-down-menu">
@@ -25,13 +25,17 @@ function ProfileButtonMenu({ setShowSignInModal }) {
                 <div className="profile-drop-down-points">
                     <div className="points-earned">
                         <div className="points-earned-left">
-                            <div className="earned-text">Earned</div>
+                            <div className="earned-text">
+                                Earned
+                            </div>
                             <div className="points-text-left">
                                 <span>0 <span className="points-text-color-gray">PTS</span></span>
                             </div>
                         </div>
                         <div className="points-earned-right">
-                            <div className="next-reward-text">Next reward</div>
+                            <div className="next-reward-text">
+                                Next reward
+                            </div>
                             <div className="points-text-right">
                                 <span>2000 <span className="points-text-color-gray">PTS</span></span>
                             </div>
@@ -39,26 +43,26 @@ function ProfileButtonMenu({ setShowSignInModal }) {
                     </div>
                 </div>
                 <div className="points-graph">
-                    <img src={pointsGraph} className="points-graph-icon" alt="Points Graph" />
+                    <img src={pointsGraph} className="points-graph-icon" alt="" />
                 </div>
                 <div className="learn-about-points">Learn more about points</div>
             </div>
             <div className="profile-drop-down-bottom">
                 <div className="profile-drop-button profile-drop-my-profile">
-                    <span className="spacing-down profile-drop-button-left">My Profile</span>
+                    <span className="spacing-down profiile-drop-button-left">My Profile</span>
                 </div>
                 <div className="profile-drop-button my-dining-history" onClick={routeToDiningDashboard}>
-                    <span className="spacing-down profile-drop-button-left">My Dining History</span>
+                    <span className="spacing-down profiile-drop-button-left">My Dining History</span>
                 </div>
                 <div className="profile-drop-button my-saved-restaurants" onClick={routeToSavedRestaurants}>
-                    <span className="spacing-down profile-drop-button-left">My Saved Restaurants</span>
+                    <span className="spacing-down profiile-drop-button-left">My Saved Restaurants</span>
                 </div>
-                <div className="profile-log-out-button">
-                    <LogoutButton setShowSignInModal={setShowSignInModal} />
-                </div>
+                <div className="profile-log-out-button"><LogoutButton setShowSignInModal={setShowSignInModal} /></div>
             </div>
         </div>
-    );
+    )
 }
+
+
 
 export default ProfileButtonMenu;

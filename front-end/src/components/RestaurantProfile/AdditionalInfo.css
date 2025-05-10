@@ -1,0 +1,232 @@
+.additional-information-container {
+    font-size: 0.9rem;
+}
+
+.additional-information-header {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(28, 28, 28);
+}
+
+.additional-information {
+    margin-top: -5px;
+}
+
+.additional-information > div {
+    margin-top: 17px;
+}
+
+.cross-street-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.cross-street-right {
+    margin-left: 4px;
+}
+
+.cross-street-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.neighborhood-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.neighborhood-right {
+    margin-left: 4px;
+}
+
+.neighborhood-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.operation-hours-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.operation-hours-right {
+    margin-left: 4px;
+}
+
+.operation-hours-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.cuisines-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.cuisines-right {
+    margin-left: 4px;
+}
+
+.cuisines-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.dining-style-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dining-style-right {
+    margin-left: 4px;
+}
+
+.dining-style-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.dress-code-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dress-code-right {
+    margin-left: 4px;
+}
+
+.dress-code-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.parking-details-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.parking-details-right {
+    margin-left: 4px;
+}
+
+.parking-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.payment-options-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.payment-options-right {
+    margin-left: 4px;
+}
+
+.payment-options-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.website-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.website-right {
+    margin-left: 4px;
+}
+
+.website-details {
+    font-weight: 300;
+}
+
+.website-details-font {
+    color: rgb(218, 54, 68);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.phone-number-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.phone-number-right {
+    margin-left: 4px;
+}
+
+.phone-number-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+.executive-chef-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.executive-chef-right {
+    margin-left: 4px;
+}
+
+.executive-chef-details {
+    font-weight: 300;
+    color: rgb(10, 10, 10);
+}
+
+/* additional info icons */
+.cross-street-icon {
+    height: 25px;
+    width: 27px;
+}
+
+.neighborhood-icon {
+    height: 25px;
+    width: 27px;
+}
+
+.operation-hours-icon {
+    height: 25px;
+    width: 28px;
+}
+
+.cuisines-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.dining-style-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.dress-code-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.parking-details-icon {
+    height: 22px;
+    width: 25px;
+}
+
+.payment-options-icon {
+    height: 23px;
+    width: 23px;
+}
+
+.website-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.phone-number-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.executive-chef-icon {
+    height: 27px;
+    width: 26px;
+}
