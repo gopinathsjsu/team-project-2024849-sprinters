@@ -47,11 +47,13 @@ class Restaurant(db.Model):
     description = db.Column(db.String(2000), nullable=False)
     website = db.Column(db.String(2000), nullable=False)
     preview_img = db.Column(db.String(2000), nullable=False)
-
     reservations = db.relationship("Reservation", back_populates="restaurant")
     reviews = db.relationship("Review", back_populates="restaurant")
-
     saved_restaurants = db.relationship("SavedRestaurant", back_populates="restaurants")
+    manager_id = db.Column(db.Integer, db.ForeignKey("restaurant_managers.id"), nullable=True)
+    is_approved = db.Column(db.Boolean, default=False)
+
+
 
     # users = db.relationship("User", secondary=favorites,
     #                         back_populates="restaurants")
@@ -165,3 +167,62 @@ class SavedRestaurant(db.Model):
             'user_id': self.user_id,
             'restaurant_id': self.restaurant_id
         }
+
+class RestaurantManager(db.Model):
+    __tablename__ = "restaurant_managers"
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255), nullable=False)
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    contact_number = db.Column(db.String(20))
+    password_hash = db.Column(db.String(255), nullable=False)
+    is_approved = db.Column(db.Boolean, default=False)
+
+    restaurants = db.relationship("Restaurant", backref="manager", lazy=True)
+
+    def set_password(self, password):
+        from werkzeug.security import generate_password_hash
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        from werkzeug.security import check_password_hash
+        return check_password_hash(self.password_hash, password)
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'email': self.email,
+            'contact_number': self.contact_number,
+            'is_approved': self.is_approved
+        }
+
+class MenuItem(db.Model):
+    __tablename__ = "menu_items"
+
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
+
+    id = db.Column(db.Integer, primary_key=True)
+    restaurant_id = db.Column(db.Integer, db.ForeignKey("restaurants.id"), nullable=False)
+    name = db.Column(db.String(255), nullable=False)
+    description = db.Column(db.Text, nullable=True)
+    price = db.Column(db.Numeric(6, 2), nullable=False)
+    is_available = db.Column(db.Boolean, default=True)
+
+    restaurant = db.relationship("Restaurant", backref="menu_items")
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'restaurant_id': self.restaurant_id,
+            'name': self.name,
+            'description': self.description,
+            'price': float(self.price),
+            'is_available': self.is_available
+        }
+
+    def __repr__(self):
+        return f'''<MenuItem id={self.id} name={self.name} price={self.price}>'''
+
+
