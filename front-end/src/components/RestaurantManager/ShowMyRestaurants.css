@@ -1,29 +1,34 @@
-.restaurant-list-page {
+.show-my-restaurants-page {
+    min-height: calc(100vh - 100px);
     padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
     text-align: center;
 }
 
-.restaurant-list-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+.my-restaurants-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
 }
 
-.restaurant-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    width: 280px;
-    text-align: center;
+.my-restaurants-table th,
+.my-restaurants-table td {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
 }
 
-.restaurant-card h3 {
-    margin-bottom: 0.5rem;
+.preview-btn {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.restaurant-card p {
-    margin: 4px 0;
+.preview-btn:hover {
+    background-color: #2563eb;
 }

@@ -3,7 +3,7 @@ export const refreshAccessToken = async () => {
     const refreshToken = localStorage.getItem('restaurantRefreshToken');
 
     if (!refreshToken) {
-        window.location.href = '/restaurant-manager/login'; // 🔥 use window.location instead inside non-component files
+        window.location.href = '/restaurant-manager/login';
         return false;
     }
 

@@ -1,61 +1,48 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import './ShowMyRestaurants.css';
 
 const ShowMyRestaurants = () => {
-    const history = useHistory();
     const [restaurants, setRestaurants] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const token = localStorage.getItem('restaurantAccessToken');
 
     useEffect(() => {
-        const token = localStorage.getItem('restaurantToken');
-
-        if (!token) {
-            history.push('/restaurant-manager/login');
-            return;
-        }
-
-        fetch('/api/restaurant-manager/my-restaurants', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-            }
+        fetch('/api/restaurant-manager/approved-restaurants', {
+            headers: { Authorization: `Bearer ${token}` }
         })
             .then(res => res.json())
-            .then(data => {
-                setRestaurants(data);
-                setIsLoading(false);
-            })
-            .catch(() => {
-                localStorage.clear();
-                history.push('/restaurant-manager/login');
-            });
-    }, [history]);
-
-    if (isLoading) {
-        return (
-            <div className="restaurant-list-page">
-                <h2>Loading your restaurants...</h2>
-            </div>
-        );
-    }
+            .then(data => setRestaurants(data));
+    }, [token]);
 
     return (
-        <div className="restaurant-list-page">
-            <h2>My Restaurants</h2>
-            {restaurants.length === 0 ? (
-                <p>No restaurants registered yet!</p>
-            ) : (
-                <div className="restaurant-list-grid">
-                    {restaurants.map((rest) => (
-                        <div key={rest.id} className="restaurant-card">
-                            <h3>{rest.name}</h3>
-                            <p>{rest.location}</p>
-                            <p>Status: <strong>{rest.status}</strong></p>
-                        </div>
-                    ))}
-                </div>
-            )}
+        <div className="show-my-restaurants-page">
+            <h2>My Approved Restaurants</h2>
+
+            <table className="my-restaurants-table">
+                <thead>
+                <tr>
+                    <th>Restaurant Name</th>
+                    <th>Location</th>
+                    <th>Preview</th>
+                </tr>
+                </thead>
+                <tbody>
+                {restaurants.length === 0 ? (
+                    <tr><td colSpan="4">No approved restaurants yet.</td></tr>
+                ) : (
+                    restaurants.map(r => (
+                        <tr key={r.id}>
+                            <td>{r.name}</td>
+                            <td>{r.location}</td>
+                            <td>
+                                <a href={`/restaurants/${r.id}`} target="_blank" rel="noopener noreferrer">
+                                    <button className="preview-btn">Preview</button>
+                                </a>
+                            </td>
+                        </tr>
+                    ))
+                )}
+                </tbody>
+            </table>
         </div>
     );
 };

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../../icons/BookTable.jpeg';
 import './RestaurantNavBar.css';
 
 const RestaurantNavBar = () => {
-    const history = useHistory();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
         // Check login status on mount
-        const token = localStorage.getItem('restaurantAccessToken');  // ✅ updated token
+        const token = localStorage.getItem('restaurantAccessToken');
         setIsLoggedIn(!!token);
 
         // Listen for localStorage changes (optional, professional)
@@ -29,7 +28,7 @@ const RestaurantNavBar = () => {
         localStorage.removeItem('restaurantRefreshToken');
         localStorage.removeItem('restaurantManagerId');
         localStorage.removeItem('restaurantManagerName');
-        window.location.href = '/restaurant-manager/login'; // 🔥 force full reload
+        window.location.href = '/restaurant-manager/login';
     };
 
     return (
