@@ -41,7 +41,7 @@ ReserveTable is a full-stack web application for discovering, reserving, reviewi
 ### Backend
 - Flask (Python)
 - SQLAlchemy ORM
-- Flask-Login / JWT for auth
+- Flask-Login
 - PostgreSQL as the database
 
 ---
