@@ -8,6 +8,13 @@
 - [Junie Mariam Varghese](https://github.com/juniemariam)
 - [Rinku Tekchandani](https://github.com/rinkutek)
 
+### contributions
+Apoorva & Ananya collaborated on the Customer module, working across both the frontend and backend to build user-facing features like browsing restaurants, making reservations, integrating google maps API, SMTP integrating,and submitting reviews.
+
+Junie was responsible for the Restaurant Manager module, implementing both frontend and backend logic for managing restaurant profiles, updating availability, and viewing reservations.
+
+Rinku handled the Admin module end-to-end, developing backend analytics, approval workflows, and the admin dashboard UI with rich visual insights and data visualization.
+
 # 🍽️ BookTable — Restaurant Reservation Platform
 
 BookTable is a full-stack web application for discovering, reserving, reviewing, and managing restaurants. It supports user reservations and admin approvals, with a clean dashboard to monitor analytics.
