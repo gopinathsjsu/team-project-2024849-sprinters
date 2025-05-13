@@ -8,7 +8,7 @@
 - [Junie Mariam Varghese](https://github.com/juniemariam)
 - [Rinku Tekchandani](https://github.com/rinkutek)
 
-### contributions
+### Contributions
 Apoorva & Ananya collaborated on the Customer module, working across both the frontend and backend to build user-facing features like browsing restaurants, making reservations, integrating google maps API, SMTP integrating,and submitting reviews.
 
 Junie was responsible for the Restaurant Manager module, implementing both frontend and backend logic for managing restaurant profiles, updating availability, and viewing reservations.
