@@ -29,22 +29,22 @@ BookTable is a full-stack web application for discovering, reserving, reviewing,
 - Make, view, modify, and cancel reservations
 - Submit and read reviews
 
+### Restaurant Managers
+- Managing restaurant profiles
+- Updating restaurant availability
+- Viewing reservations 
+  
+
 ### 🛠️ Admins
 - Admin login interface
 - `/admin/dashboard` with analytics:
-  - Total reservations (last 30 days)
-  - Average party size
-  - Top booked restaurants
+   - Reservation trends (30-day history)
+   - Top-performing restaurants
+   - Top booked restaurants
   - Daily breakdown
 - `/admin/restaurants` management:
   - View details of each restaurant in a modal
   - Approve / delete new submissions
-
-### 📊 Analytics
-- Reservation trends (30-day history)
-- Top-performing restaurants
-- Average reservation metrics
-
 ---
 
 ## 🏗️ Architecture
