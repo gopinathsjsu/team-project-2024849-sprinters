@@ -15,6 +15,14 @@ Junie was responsible for the Restaurant Manager module, implementing both front
 
 Rinku handled the Admin module end-to-end, developing backend analytics, approval workflows, and the admin dashboard UI with rich visual insights and data visualization.
 
+### XP Values
+1.	Communication
+The team maintained open and consistent communication by holding daily stand-up meetings, using collaborative tools and engaging in pair programming sessions. This helped ensure that everyone was aligned on progress, blockers, and changes in requirements. Regular code reviews and design discussions promoted shared understanding and reduced miscommunication.
+
+2.	Respect
+The team created a culture of mutual respect, valuing each member's contributions regardless of role or experience level. Constructive feedback was given in a supportive manner, and decisions were made collaboratively. Respect for each other’s time and work led to better morale and productivity.
+
+
 # 🍽️ BookTable — Restaurant Reservation Platform
 
 BookTable is a full-stack web application for discovering, reserving, reviewing, and managing restaurants. It supports user reservations and admin approvals, with a clean dashboard to monitor analytics.
@@ -82,7 +90,6 @@ front-end/ # React app
 - **Decorator Pattern**: Used extensively via Flask route decorators
 - **Observer & State Patterns**: Used via Redux and React hooks
 - **Command Pattern**: Used for CLI seeding (`flask seed all`)
-
 ---
 
 ## 📐 Diagrams
@@ -91,7 +98,8 @@ front-end/ # React app
 - **Deployment Diagram**: [View Here](./architecture/DeploymentDiagram.png)
 
 ### 🧩 Component Diagram
-- **Component Diagram**: [View Here](./architecture/ComponentDiagram.png)  
+- **Component Diagram**: [View Here](./architecture/ComponentDiagram.png)
+
 
 ### 🔧 Backend
 ```bash
