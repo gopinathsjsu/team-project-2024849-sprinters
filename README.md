@@ -1,8 +1,16 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Fu_pncF5)
 
-# 🍽️ ReserveTable — Restaurant Reservation Platform
+# Team Name - Sprinters
 
-ReserveTable is a full-stack web application for discovering, reserving, reviewing, and managing restaurants. It supports user reservations and admin approvals, with a clean dashboard to monitor analytics.
+### 👥 Team
+- [Ananya Praveen Shetty](https://github.com/ananya101001)
+- [Apoorva Shastry](https://github.com/ApoorvaShastry10)
+- [Junie Mariam Varghese](https://github.com/juniemariam)
+- [Rinku Tekchandani](https://github.com/rinkutek)
+
+# 🍽️ BookTable — Restaurant Reservation Platform
+
+BookTable is a full-stack web application for discovering, reserving, reviewing, and managing restaurants. It supports user reservations and admin approvals, with a clean dashboard to monitor analytics.
 
 ---
 
@@ -93,11 +101,3 @@ cd front-end
 npm install
 npm start
 ```
-
-### 👥 Team
-- [Ananya Praveen Shetty](https://github.com/ananya101001)
-- [Apoorva Shastry](https://github.com/ApoorvaShastry10)
-- [Junie Mariam Varghese](https://github.com/juniemariam)
-- [Rinku Tekchandani](https://github.com/rinkutek)
-
-
